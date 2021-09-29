@@ -1,0 +1,10 @@
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\bin\Debug\MemoryMarcoMalanchin.exe.config
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\bin\Debug\MemoryMarcoMalanchin.exe
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\bin\Debug\MemoryMarcoMalanchin.pdb
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\obj\Debug\MemoryMarcoMalanchin.csprojAssemblyReference.cache
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\obj\Debug\MemoryMarcoMalanchin.Form1.resources
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\obj\Debug\MemoryMarcoMalanchin.Properties.Resources.resources
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\obj\Debug\MemoryMarcoMalanchin.csproj.GenerateResource.cache
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\obj\Debug\MemoryMarcoMalanchin.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\obj\Debug\MemoryMarcoMalanchin.exe
+C:\Users\Utente\Desktop\MemoryMarcoMalanchin\MemoryMarcoMalanchin\obj\Debug\MemoryMarcoMalanchin.pdb
