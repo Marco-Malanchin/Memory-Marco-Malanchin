@@ -40,9 +40,10 @@
             // 
             // GiocaBtn
             // 
-            this.GiocaBtn.Location = new System.Drawing.Point(267, 228);
+            this.GiocaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GiocaBtn.Location = new System.Drawing.Point(343, 330);
             this.GiocaBtn.Name = "GiocaBtn";
-            this.GiocaBtn.Size = new System.Drawing.Size(216, 45);
+            this.GiocaBtn.Size = new System.Drawing.Size(300, 75);
             this.GiocaBtn.TabIndex = 0;
             this.GiocaBtn.Text = "Gioca";
             this.GiocaBtn.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@
             // 
             // ClassificaBtn
             // 
-            this.ClassificaBtn.Location = new System.Drawing.Point(267, 279);
+            this.ClassificaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassificaBtn.Location = new System.Drawing.Point(343, 411);
             this.ClassificaBtn.Name = "ClassificaBtn";
-            this.ClassificaBtn.Size = new System.Drawing.Size(216, 45);
+            this.ClassificaBtn.Size = new System.Drawing.Size(300, 75);
             this.ClassificaBtn.TabIndex = 1;
             this.ClassificaBtn.Text = "Classifica";
             this.ClassificaBtn.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // 
             // EsciBtn
             // 
-            this.EsciBtn.Location = new System.Drawing.Point(267, 330);
+            this.EsciBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EsciBtn.Location = new System.Drawing.Point(343, 492);
             this.EsciBtn.Name = "EsciBtn";
-            this.EsciBtn.Size = new System.Drawing.Size(216, 45);
+            this.EsciBtn.Size = new System.Drawing.Size(300, 75);
             this.EsciBtn.TabIndex = 2;
             this.EsciBtn.Text = "Esci";
             this.EsciBtn.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // 
             // InformazioniBtn
             // 
+            this.InformazioniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InformazioniBtn.Location = new System.Drawing.Point(12, 12);
             this.InformazioniBtn.Name = "InformazioniBtn";
-            this.InformazioniBtn.Size = new System.Drawing.Size(107, 44);
+            this.InformazioniBtn.Size = new System.Drawing.Size(220, 50);
             this.InformazioniBtn.TabIndex = 3;
             this.InformazioniBtn.Text = "Informazioni";
             this.InformazioniBtn.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             // ValoreTessereBtn1
             // 
-            this.ValoreTessereBtn1.Location = new System.Drawing.Point(204, 71);
+            this.ValoreTessereBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValoreTessereBtn1.Location = new System.Drawing.Point(240, 162);
             this.ValoreTessereBtn1.Name = "ValoreTessereBtn1";
-            this.ValoreTessereBtn1.Size = new System.Drawing.Size(90, 65);
+            this.ValoreTessereBtn1.Size = new System.Drawing.Size(175, 150);
             this.ValoreTessereBtn1.TabIndex = 4;
             this.ValoreTessereBtn1.Text = "8";
             this.ValoreTessereBtn1.UseVisualStyleBackColor = true;
@@ -90,9 +95,10 @@
             // 
             // ValoreTessereBtn2
             // 
-            this.ValoreTessereBtn2.Location = new System.Drawing.Point(323, 71);
+            this.ValoreTessereBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValoreTessereBtn2.Location = new System.Drawing.Point(418, 162);
             this.ValoreTessereBtn2.Name = "ValoreTessereBtn2";
-            this.ValoreTessereBtn2.Size = new System.Drawing.Size(100, 65);
+            this.ValoreTessereBtn2.Size = new System.Drawing.Size(175, 150);
             this.ValoreTessereBtn2.TabIndex = 5;
             this.ValoreTessereBtn2.Text = "16";
             this.ValoreTessereBtn2.UseVisualStyleBackColor = true;
@@ -100,9 +106,10 @@
             // 
             // ValoreTessereBtn3
             // 
-            this.ValoreTessereBtn3.Location = new System.Drawing.Point(453, 71);
+            this.ValoreTessereBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValoreTessereBtn3.Location = new System.Drawing.Point(599, 161);
             this.ValoreTessereBtn3.Name = "ValoreTessereBtn3";
-            this.ValoreTessereBtn3.Size = new System.Drawing.Size(100, 65);
+            this.ValoreTessereBtn3.Size = new System.Drawing.Size(175, 150);
             this.ValoreTessereBtn3.TabIndex = 6;
             this.ValoreTessereBtn3.Text = "24";
             this.ValoreTessereBtn3.UseVisualStyleBackColor = true;
@@ -110,10 +117,10 @@
             // 
             // SceltaTessereLbl
             // 
-            this.SceltaTessereLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SceltaTessereLbl.Location = new System.Drawing.Point(162, 10);
+            this.SceltaTessereLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SceltaTessereLbl.Location = new System.Drawing.Point(199, 96);
             this.SceltaTessereLbl.Name = "SceltaTessereLbl";
-            this.SceltaTessereLbl.Size = new System.Drawing.Size(543, 52);
+            this.SceltaTessereLbl.Size = new System.Drawing.Size(771, 62);
             this.SceltaTessereLbl.TabIndex = 7;
             this.SceltaTessereLbl.Text = "Scegli quante tessere generare:";
             // 
@@ -121,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(982, 603);
             this.Controls.Add(this.SceltaTessereLbl);
             this.Controls.Add(this.ValoreTessereBtn3);
             this.Controls.Add(this.ValoreTessereBtn2);

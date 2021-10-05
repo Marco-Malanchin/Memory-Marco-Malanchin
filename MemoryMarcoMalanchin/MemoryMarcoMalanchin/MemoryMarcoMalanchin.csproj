@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bulbasaur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Charmander.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chikorita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chimchar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cyndaquil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mudkip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Piplup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Squirtle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torchic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Totodile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Treecko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turtwig.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
