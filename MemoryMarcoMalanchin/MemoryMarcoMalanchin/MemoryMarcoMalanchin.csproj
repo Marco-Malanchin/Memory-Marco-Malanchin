@@ -116,5 +116,8 @@
   <ItemGroup>
     <None Include="Resources\Turtwig.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qq.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

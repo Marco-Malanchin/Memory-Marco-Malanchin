@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.GiocaBtn = new System.Windows.Forms.Button();
             this.ClassificaBtn = new System.Windows.Forms.Button();
             this.EsciBtn = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.ValoreTessereBtn2 = new System.Windows.Forms.Button();
             this.ValoreTessereBtn3 = new System.Windows.Forms.Button();
             this.SceltaTessereLbl = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // GiocaBtn
@@ -124,6 +126,11 @@
             this.SceltaTessereLbl.TabIndex = 7;
             this.SceltaTessereLbl.Text = "Scegli quante tessere generare:";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 750;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,6 +160,7 @@
         private System.Windows.Forms.Button ValoreTessereBtn2;
         private System.Windows.Forms.Button ValoreTessereBtn3;
         private System.Windows.Forms.Label SceltaTessereLbl;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

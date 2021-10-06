@@ -15,6 +15,10 @@ namespace MemoryMarcoMalanchin
         int numeroTessere;
         PictureBox[] memory;
         int Bulbasaur, Charmander, Squirtle, Chikorita, Cyndaquil, Totodile, Treecko, Torchic, Mudkip, Turtwig, Chimchar, Piplup;
+        Image iniziale = Properties.Resources.qq;
+        PictureBox primoClick, secondoClick;
+        int turno;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +31,7 @@ namespace MemoryMarcoMalanchin
             ValoreTessereBtn3.Visible = false;
             ValoreTessereBtn3.Enabled = false;
         }
-        private void CreaBottoni()
+        public void CreaBottoni()
         {
             Random generatoreNumeri = new Random();
             int PosizioneTesseraX = 70;
@@ -48,6 +52,10 @@ namespace MemoryMarcoMalanchin
                     memory[i].BorderStyle = BorderStyle.FixedSingle;
                     memory[i].Location = new Point(PosizioneTesseraX, PosizioneTesseraY);
                     memory[i].Size = new Size(75, 100);
+                    memory[i].BackColor = Color.Black;
+                    memory[i].Padding = new Padding(5000, 0, 0, 0);
+                    memory[i].Name = nomeFigura(numeroFigura);
+                    memory[i].Click += new EventHandler(resettaImmagine);
                     this.Controls.Add(memory[i]);
                     x++;
                     PosizioneTesseraX += 80;
@@ -147,8 +155,90 @@ namespace MemoryMarcoMalanchin
             }
             return -1;
         }
+        public string nomeFigura(int generaFigure)
+        {
+            switch (generaFigure)
+            {
+                case 0:
+                    return "Bulbasaur";
+                case 1:
+                    return "Charmander";
+                case 2:
+                    return "Squirtle";
+                case 3:
+                    return "Chikorita";
+                case 4:
+                    return "Cyndaquil";
+                case 5:
+                    return "Totodile";
+                case 6:
+                    return "Treecko";
+                case 7:
+                    return "Torchic";
+                case 8:
+                    return "Mudkip";
+                case 9:
+                    return "Turtwig";
+                case 10:
+                    return "Chimchar";
+                case 11:
+                    return "Piplup";
+            }
+            return "";
+        }
+            public void resettaImmagine(object sender, EventArgs e)
+        {
 
-    private void GiocaBtn_Click(object sender, EventArgs e)
+            if (primoClick != null && secondoClick != null)
+                return;
+            
+            PictureBox resetta = sender as PictureBox;
+            if (resetta == null)
+                return;
+
+            if (primoClick == null)
+            {
+                primoClick = resetta;
+                primoClick.BackColor = Color.Transparent;
+                primoClick.Image = resetta.Image;
+                primoClick.Padding = new Padding(0, 0, 0, 0);
+                return;
+            }
+
+            secondoClick = resetta;
+            secondoClick.BackColor = Color.Transparent;
+            secondoClick.Image = resetta.Image;
+
+            secondoClick.Padding = new Padding(0, 0, 0, 0);
+
+            if (primoClick.Name == secondoClick.Name)
+            {
+                this.Controls.Remove(primoClick);
+                this.Controls.Remove(secondoClick);
+                primoClick = null;
+                secondoClick = null;
+            }
+            else
+                timer1.Start();
+        }
+        private void controlloVittoria()
+        {
+            
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+
+            primoClick.BackColor = Color.Black;
+            secondoClick.BackColor = Color.Black;
+            primoClick.Padding = new Padding(5000, 0, 0, 0);
+            secondoClick.Padding = new Padding(5000, 0, 0, 0);
+            primoClick = null;
+            secondoClick = null;
+            
+        }
+
+        private void GiocaBtn_Click(object sender, EventArgs e)
         {
             GiocaBtn.Visible = false;
             GiocaBtn.Enabled = false;
