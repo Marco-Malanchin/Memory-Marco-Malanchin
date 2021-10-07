@@ -38,6 +38,8 @@
             this.ValoreTessereBtn3 = new System.Windows.Forms.Button();
             this.SceltaTessereLbl = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblPuntiGiocatore1 = new System.Windows.Forms.Label();
+            this.lblPuntiGiocatore2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // GiocaBtn
@@ -131,11 +133,29 @@
             this.timer1.Interval = 750;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblPuntiGiocatore1
+            // 
+            this.lblPuntiGiocatore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntiGiocatore1.Location = new System.Drawing.Point(195, 507);
+            this.lblPuntiGiocatore1.Name = "lblPuntiGiocatore1";
+            this.lblPuntiGiocatore1.Size = new System.Drawing.Size(280, 50);
+            this.lblPuntiGiocatore1.TabIndex = 8;
+            // 
+            // lblPuntiGiocatore2
+            // 
+            this.lblPuntiGiocatore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntiGiocatore2.Location = new System.Drawing.Point(481, 507);
+            this.lblPuntiGiocatore2.Name = "lblPuntiGiocatore2";
+            this.lblPuntiGiocatore2.Size = new System.Drawing.Size(280, 50);
+            this.lblPuntiGiocatore2.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 603);
+            this.Controls.Add(this.lblPuntiGiocatore2);
+            this.Controls.Add(this.lblPuntiGiocatore1);
             this.Controls.Add(this.SceltaTessereLbl);
             this.Controls.Add(this.ValoreTessereBtn3);
             this.Controls.Add(this.ValoreTessereBtn2);
@@ -161,6 +181,8 @@
         private System.Windows.Forms.Button ValoreTessereBtn3;
         private System.Windows.Forms.Label SceltaTessereLbl;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblPuntiGiocatore1;
+        private System.Windows.Forms.Label lblPuntiGiocatore2;
     }
 }
 

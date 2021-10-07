@@ -17,7 +17,9 @@ namespace MemoryMarcoMalanchin
         int Bulbasaur, Charmander, Squirtle, Chikorita, Cyndaquil, Totodile, Treecko, Torchic, Mudkip, Turtwig, Chimchar, Piplup;
         Image iniziale = Properties.Resources.qq;
         PictureBox primoClick, secondoClick;
-        int turno;
+        bool turno = true;
+        int coppieGiocatore1 = 0;
+        int coppieGiocatore2 = 0;
 
         public Form1()
         {
@@ -30,6 +32,10 @@ namespace MemoryMarcoMalanchin
             ValoreTessereBtn2.Enabled = false;
             ValoreTessereBtn3.Visible = false;
             ValoreTessereBtn3.Enabled = false;
+            lblPuntiGiocatore1.Enabled = false;
+            lblPuntiGiocatore1.Visible = false;
+            lblPuntiGiocatore2.Enabled = false;
+            lblPuntiGiocatore2.Visible = false;
         }
         public void CreaBottoni()
         {
@@ -202,7 +208,9 @@ namespace MemoryMarcoMalanchin
                 primoClick.BackColor = Color.Transparent;
                 primoClick.Image = resetta.Image;
                 primoClick.Padding = new Padding(0, 0, 0, 0);
+                primoClick.Enabled = false;
                 return;
+                
             }
 
             secondoClick = resetta;
@@ -217,13 +225,53 @@ namespace MemoryMarcoMalanchin
                 this.Controls.Remove(secondoClick);
                 primoClick = null;
                 secondoClick = null;
+                if (turno)
+                {
+                    coppieGiocatore1++;
+                    this.BackColor = Color.LightBlue;
+                    lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+                    lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
+                }
+                else
+                {
+                    coppieGiocatore2++;
+                    this.BackColor = Color.LightSalmon;
+                    lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+                    lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
+                }
+                if (coppieGiocatore1 + coppieGiocatore2 == memory.Length / 2)
+                {
+                    controlloVittoria();
+                }
             }
             else
+            {
                 timer1.Start();
+                turno = !turno;
+                lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+                lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
+            }
+            if (turno)
+            {
+                this.BackColor = Color.LightBlue;
+                lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+                lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
+            }
+            else
+            {
+                this.BackColor = Color.LightSalmon;
+                lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+                lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
+            }
         }
         private void controlloVittoria()
         {
-            
+            if (coppieGiocatore1 > coppieGiocatore2)
+                MessageBox.Show("vince giocatore 1");
+            else if (coppieGiocatore1 < coppieGiocatore2)
+                MessageBox.Show("vince giocatore 2");
+            else if (coppieGiocatore1 == coppieGiocatore2)
+                MessageBox.Show("Pareggio");
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -233,12 +281,14 @@ namespace MemoryMarcoMalanchin
             secondoClick.BackColor = Color.Black;
             primoClick.Padding = new Padding(5000, 0, 0, 0);
             secondoClick.Padding = new Padding(5000, 0, 0, 0);
+            primoClick.Enabled = true;
+            secondoClick.Enabled = true;
             primoClick = null;
             secondoClick = null;
             
         }
 
-        private void GiocaBtn_Click(object sender, EventArgs e)
+        public void GiocaBtn_Click(object sender, EventArgs e)
         {
             GiocaBtn.Visible = false;
             GiocaBtn.Enabled = false;
@@ -256,6 +306,11 @@ namespace MemoryMarcoMalanchin
             ValoreTessereBtn2.Enabled = true;
             ValoreTessereBtn3.Visible = true;
             ValoreTessereBtn3.Enabled = true;
+            lblPuntiGiocatore1.Enabled = true;
+            lblPuntiGiocatore1.Visible = true;
+            lblPuntiGiocatore2.Enabled = true;
+            lblPuntiGiocatore2.Visible = true;
+            
         }
 
         private void ClasificaBtn_Click(object sender, EventArgs e)
@@ -300,6 +355,9 @@ namespace MemoryMarcoMalanchin
             ValoreTessereBtn3.Visible = false;
             ValoreTessereBtn3.Enabled = false;
             CreaBottoni();
+            this.BackColor = Color.LightBlue;
+            lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+            lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
         }
 
         private void ValoreTessereBtn2_Click(object sender, EventArgs e)
@@ -315,6 +373,9 @@ namespace MemoryMarcoMalanchin
             ValoreTessereBtn3.Visible = false;
             ValoreTessereBtn3.Enabled = false;
             CreaBottoni();
+            this.BackColor = Color.LightBlue;
+            lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+            lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
         }
 
         private void ValoreTessereBtn3_Click(object sender, EventArgs e)
@@ -330,6 +391,9 @@ namespace MemoryMarcoMalanchin
             ValoreTessereBtn3.Visible = false;
             ValoreTessereBtn3.Enabled = false;
             CreaBottoni();
+            this.BackColor = Color.LightBlue;
+            lblPuntiGiocatore1.Text = $"giocatore 1:{coppieGiocatore1}";
+            lblPuntiGiocatore2.Text = $"giocatore 2:{coppieGiocatore2}";
         }
     }
 }
