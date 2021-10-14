@@ -120,4 +120,19 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="lblInfomazioni.Text" xml:space="preserve">
+    <value>                                         IL GIOCO DEL MEMORY
+
+Funzionalità dei bottoni:
+Gioca: avvia il programma aprendo la schermata di inserimento dei nomi, dopo aver inserito i nomi
+premendo di nuovo "avvia", si apre la scelta delle caselle del memory da far generare e si avvia la partita.
+
+Informazioni: si apre la schermata delle informazioni del programma.
+
+Regole del Memory:  Una volte posizionate tutte le tessere del memory in posizione coperta, il giocatore 1 attraverso l'utilizzo
+del mouse premerà su due tessere differenti, le tessere mostreranno la loro figura, se le figure sarranno uguali allora
+il giocatore otterrà 1 punto e le tessere scompariranno. Altrimenti le tessere si rimetteranno in posizione coperta e il turno passerà
+a l'altro giocatore. Abbinate tutte le tessere vincerà chi avrà fatto più punti.
+Creatore: Marco Malanchin</value>
+  </data>
 </root>

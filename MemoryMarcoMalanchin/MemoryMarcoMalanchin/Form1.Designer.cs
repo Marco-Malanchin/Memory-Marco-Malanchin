@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.GiocaBtn = new System.Windows.Forms.Button();
-            this.ClassificaBtn = new System.Windows.Forms.Button();
-            this.EsciBtn = new System.Windows.Forms.Button();
             this.InformazioniBtn = new System.Windows.Forms.Button();
             this.ValoreTessereBtn1 = new System.Windows.Forms.Button();
             this.ValoreTessereBtn2 = new System.Windows.Forms.Button();
@@ -40,6 +39,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblPuntiGiocatore1 = new System.Windows.Forms.Label();
             this.lblPuntiGiocatore2 = new System.Windows.Forms.Label();
+            this.lblChiediGiocatori = new System.Windows.Forms.Label();
+            this.txtBxGiocatore1 = new System.Windows.Forms.TextBox();
+            this.txtBxGiocatore2 = new System.Windows.Forms.TextBox();
+            this.btnGioca2 = new System.Windows.Forms.Button();
+            this.lblTurno = new System.Windows.Forms.Label();
+            this.lblInfomazioni = new System.Windows.Forms.Label();
+            this.btnMenù = new System.Windows.Forms.Button();
+            this.lblTitolo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // GiocaBtn
@@ -53,34 +60,12 @@
             this.GiocaBtn.UseVisualStyleBackColor = true;
             this.GiocaBtn.Click += new System.EventHandler(this.GiocaBtn_Click);
             // 
-            // ClassificaBtn
-            // 
-            this.ClassificaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassificaBtn.Location = new System.Drawing.Point(343, 411);
-            this.ClassificaBtn.Name = "ClassificaBtn";
-            this.ClassificaBtn.Size = new System.Drawing.Size(300, 75);
-            this.ClassificaBtn.TabIndex = 1;
-            this.ClassificaBtn.Text = "Classifica";
-            this.ClassificaBtn.UseVisualStyleBackColor = true;
-            this.ClassificaBtn.Click += new System.EventHandler(this.ClasificaBtn_Click);
-            // 
-            // EsciBtn
-            // 
-            this.EsciBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EsciBtn.Location = new System.Drawing.Point(343, 492);
-            this.EsciBtn.Name = "EsciBtn";
-            this.EsciBtn.Size = new System.Drawing.Size(300, 75);
-            this.EsciBtn.TabIndex = 2;
-            this.EsciBtn.Text = "Esci";
-            this.EsciBtn.UseVisualStyleBackColor = true;
-            this.EsciBtn.Click += new System.EventHandler(this.EsciBtn_Click);
-            // 
             // InformazioniBtn
             // 
             this.InformazioniBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InformazioniBtn.Location = new System.Drawing.Point(12, 12);
+            this.InformazioniBtn.Location = new System.Drawing.Point(343, 411);
             this.InformazioniBtn.Name = "InformazioniBtn";
-            this.InformazioniBtn.Size = new System.Drawing.Size(220, 50);
+            this.InformazioniBtn.Size = new System.Drawing.Size(300, 75);
             this.InformazioniBtn.TabIndex = 3;
             this.InformazioniBtn.Text = "Informazioni";
             this.InformazioniBtn.UseVisualStyleBackColor = true;
@@ -149,11 +134,94 @@
             this.lblPuntiGiocatore2.Size = new System.Drawing.Size(280, 50);
             this.lblPuntiGiocatore2.TabIndex = 9;
             // 
+            // lblChiediGiocatori
+            // 
+            this.lblChiediGiocatori.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChiediGiocatori.Location = new System.Drawing.Point(187, 47);
+            this.lblChiediGiocatori.Name = "lblChiediGiocatori";
+            this.lblChiediGiocatori.Size = new System.Drawing.Size(783, 52);
+            this.lblChiediGiocatori.TabIndex = 10;
+            this.lblChiediGiocatori.Text = "Inserisci il nome dei due giocatori:";
+            // 
+            // txtBxGiocatore1
+            // 
+            this.txtBxGiocatore1.Location = new System.Drawing.Point(291, 108);
+            this.txtBxGiocatore1.Name = "txtBxGiocatore1";
+            this.txtBxGiocatore1.Size = new System.Drawing.Size(386, 22);
+            this.txtBxGiocatore1.TabIndex = 11;
+            // 
+            // txtBxGiocatore2
+            // 
+            this.txtBxGiocatore2.Location = new System.Drawing.Point(291, 161);
+            this.txtBxGiocatore2.Name = "txtBxGiocatore2";
+            this.txtBxGiocatore2.Size = new System.Drawing.Size(386, 22);
+            this.txtBxGiocatore2.TabIndex = 12;
+            // 
+            // btnGioca2
+            // 
+            this.btnGioca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGioca2.Location = new System.Drawing.Point(343, 199);
+            this.btnGioca2.Name = "btnGioca2";
+            this.btnGioca2.Size = new System.Drawing.Size(300, 75);
+            this.btnGioca2.TabIndex = 13;
+            this.btnGioca2.Text = "Gioca";
+            this.btnGioca2.UseVisualStyleBackColor = true;
+            this.btnGioca2.Click += new System.EventHandler(this.btnGioca2_Click);
+            // 
+            // lblTurno
+            // 
+            this.lblTurno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurno.Location = new System.Drawing.Point(599, 12);
+            this.lblTurno.Name = "lblTurno";
+            this.lblTurno.Size = new System.Drawing.Size(361, 35);
+            this.lblTurno.TabIndex = 14;
+            this.lblTurno.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblInfomazioni
+            // 
+            this.lblInfomazioni.BackColor = System.Drawing.Color.Transparent;
+            this.lblInfomazioni.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfomazioni.Location = new System.Drawing.Point(39, 53);
+            this.lblInfomazioni.Name = "lblInfomazioni";
+            this.lblInfomazioni.Size = new System.Drawing.Size(917, 541);
+            this.lblInfomazioni.TabIndex = 15;
+            this.lblInfomazioni.Text = resources.GetString("lblInfomazioni.Text");
+            // 
+            // btnMenù
+            // 
+            this.btnMenù.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenù.Location = new System.Drawing.Point(0, -3);
+            this.btnMenù.Name = "btnMenù";
+            this.btnMenù.Size = new System.Drawing.Size(262, 38);
+            this.btnMenù.TabIndex = 16;
+            this.btnMenù.Text = "Torna al menù principale";
+            this.btnMenù.UseVisualStyleBackColor = true;
+            this.btnMenù.Click += new System.EventHandler(this.Menù_Click);
+            // 
+            // lblTitolo
+            // 
+            this.lblTitolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitolo.ForeColor = System.Drawing.Color.Red;
+            this.lblTitolo.Location = new System.Drawing.Point(12, 92);
+            this.lblTitolo.Name = "lblTitolo";
+            this.lblTitolo.Size = new System.Drawing.Size(963, 91);
+            this.lblTitolo.TabIndex = 17;
+            this.lblTitolo.Text = "IL GIOCO DEL MEMORY";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 603);
+            this.Controls.Add(this.lblTitolo);
+            this.Controls.Add(this.btnMenù);
+            this.Controls.Add(this.lblInfomazioni);
+            this.Controls.Add(this.lblTurno);
+            this.Controls.Add(this.btnGioca2);
+            this.Controls.Add(this.txtBxGiocatore2);
+            this.Controls.Add(this.txtBxGiocatore1);
+            this.Controls.Add(this.lblChiediGiocatori);
             this.Controls.Add(this.lblPuntiGiocatore2);
             this.Controls.Add(this.lblPuntiGiocatore1);
             this.Controls.Add(this.SceltaTessereLbl);
@@ -161,20 +229,17 @@
             this.Controls.Add(this.ValoreTessereBtn2);
             this.Controls.Add(this.ValoreTessereBtn1);
             this.Controls.Add(this.InformazioniBtn);
-            this.Controls.Add(this.EsciBtn);
-            this.Controls.Add(this.ClassificaBtn);
             this.Controls.Add(this.GiocaBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button GiocaBtn;
-        private System.Windows.Forms.Button ClassificaBtn;
-        private System.Windows.Forms.Button EsciBtn;
         private System.Windows.Forms.Button InformazioniBtn;
         private System.Windows.Forms.Button ValoreTessereBtn1;
         private System.Windows.Forms.Button ValoreTessereBtn2;
@@ -183,6 +248,14 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblPuntiGiocatore1;
         private System.Windows.Forms.Label lblPuntiGiocatore2;
+        private System.Windows.Forms.Label lblChiediGiocatori;
+        private System.Windows.Forms.TextBox txtBxGiocatore1;
+        private System.Windows.Forms.TextBox txtBxGiocatore2;
+        private System.Windows.Forms.Button btnGioca2;
+        private System.Windows.Forms.Label lblTurno;
+        private System.Windows.Forms.Label lblInfomazioni;
+        private System.Windows.Forms.Button btnMenù;
+        private System.Windows.Forms.Label lblTitolo;
     }
 }
 
