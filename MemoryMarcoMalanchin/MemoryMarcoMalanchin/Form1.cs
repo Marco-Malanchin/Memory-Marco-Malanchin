@@ -228,7 +228,7 @@ namespace MemoryMarcoMalanchin
                 primoClick.BackColor = Color.Transparent;
                 primoClick.Image = resetta.Image;
                 primoClick.Padding = new Padding(0, 0, 0, 0);
-                primoClick.Enabled = false;
+                primoClick.Enabled = false;//Quando effettuo il primo click disattivo la tessera altrimenti potrei clicckare più volte in un turno su una tessera e contarla come punto.
                 return;
                 
             }
@@ -241,7 +241,7 @@ namespace MemoryMarcoMalanchin
 
             if (primoClick.Name == secondoClick.Name) //se i nomi delle due picturbox sono uguali viene assegnato il punto al giocatore e le carte scompaiono.
             {
-                this.Controls.Remove(primoClick);
+                this.Controls.Remove(primoClick); //Quando clicco su una figura e la associo alla sua tessera corrispondente rimuovo dal form le tessere.
                 this.Controls.Remove(secondoClick);
                 primoClick = null;
                 secondoClick = null;
@@ -359,7 +359,7 @@ namespace MemoryMarcoMalanchin
 
         private void ValoreTessereBtn1_Click(object sender, EventArgs e)
         {
-            numeroTessere = 8;
+            numeroTessere = 8;//assegno il valore della lunghezza dell'array.
             memory = new PictureBox[numeroTessere];
             SceltaTessereLbl.Visible = false;
             SceltaTessereLbl.Enabled = false;
@@ -380,7 +380,7 @@ namespace MemoryMarcoMalanchin
 
         private void ValoreTessereBtn2_Click(object sender, EventArgs e)
         {
-            numeroTessere = 16;
+            numeroTessere = 16;//assegno il valore della lunghezza dell'array.
             memory = new PictureBox[numeroTessere];
             SceltaTessereLbl.Visible = false;
             SceltaTessereLbl.Enabled = false;
@@ -401,7 +401,7 @@ namespace MemoryMarcoMalanchin
 
         private void ValoreTessereBtn3_Click(object sender, EventArgs e)
         {
-            numeroTessere = 24;
+            numeroTessere = 24;//assegno il valore della lunghezza dell'array.
             memory = new PictureBox[numeroTessere];
             SceltaTessereLbl.Visible = false;
             SceltaTessereLbl.Enabled = false;
